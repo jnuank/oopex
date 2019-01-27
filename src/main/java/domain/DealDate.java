@@ -19,6 +19,12 @@ public class DealDate{
                                     DateTimeFormatter.ofPattern("yyyyMMdd"));
     }
 
+    @Override
+    public boolean equals(Object obj) {
+        if(this.getClass() != obj.getClass()) return false;
+        
+        return this.value.equals(((DealDate) obj).getValue());
+    }
     
 
 }
