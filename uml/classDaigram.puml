@@ -1,0 +1,23 @@
+@startuml
+
+class "取引" as deal {
+    -取引日付 date
+    -取引額 amount
+    -取引カテゴリ category 
+}
+
+class "取引日付" as dealdate {
+}
+
+class "取引額" as dealamount {
+}
+
+class "カテゴリ" as dealcategory {
+}
+
+deal --> dealdate
+deal --> dealamount
+deal --> dealcategory
+
+
+@enduml
