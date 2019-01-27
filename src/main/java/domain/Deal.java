@@ -10,4 +10,17 @@ public class Deal{
         this.amount = amount;
         this.category = category;
     }
+
+    public DealAmount getDealAmount(){
+        return amount;
+    }
+
+    public DealCategory getCategory(){
+        return category;
+    }
+
+    public DealDate getDate()
+    {
+        return date;
+    }
 }

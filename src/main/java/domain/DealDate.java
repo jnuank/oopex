@@ -25,6 +25,13 @@ public class DealDate{
         
         return this.value.equals(((DealDate) obj).getValue());
     }
-    
+   
+    public boolean equalsMonth(Object obj)
+    {
+        if(this.getClass() != obj.getClass()) return false;
+        
+        return this.value.getYear() == ((DealDate) obj).value.getYear() &&
+                this.value.getMonthValue() == ((DealDate) obj).value.getMonthValue(); 
+    }
 
 }
