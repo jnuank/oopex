@@ -3,11 +3,13 @@ package domain;
 import java.util.List;
 import java.util.stream.Stream;
 
-public class SummaryMonth implements ISummarySpec {
+/**
+ * 月別集計仕様
+ */
+public class SummaryMonthSpec implements ISummarySpec {
     private DealDate rule;
 
-    public SummaryMonth(DealDate fileterRule)
-    {
+    public SummaryMonthSpec(DealDate fileterRule) {
         this.rule = fileterRule;
     }
 
@@ -15,6 +17,5 @@ public class SummaryMonth implements ISummarySpec {
     public Stream<Deal> fileter(List<Deal> records) {
         return records.stream().filter(deal -> deal.getDate().equalsMonth(rule));
     }
-
 
 }
