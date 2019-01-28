@@ -2,6 +2,9 @@ package domain;
 
 import java.util.*;
 
+/**
+ * 取引履歴
+ */
 public class DealRecords {
     private List<Deal> values;
 
